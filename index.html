@@ -8,24 +8,51 @@
 <body>
   <h2>ECET Registration Form</h2>
   <form id="ecetForm">
-    <label>First Name: <input type="text" id="fname" required></label>
-    <label>Last Name: <input type="text" id="lname" required></label>
-    <label>Father's Name: <input type="text" id="father" required></label>
-    <label>Mother's Name: <input type="text" id="mother" required></label>
-    <label>DOB: <input type="date" id="dob" required></label>
-    <label>Gender:
-      <select id="gender" required>
-        <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-    </label>
-    <label>Address: <textarea id="address" required></textarea></label>
-    <label>Email: <input type="email" id="email" required></label>
-    <label>Phone: <input type="text" id="phone" required></label>
-    <label>Education: <input type="text" id="education" required></label>
-    <label>Photo: <input type="file" id="photo" accept="image/*" required></label>
-    <label>Signature: <input type="file" id="sign" accept="image/*" required></label>
+    
+    <fieldset>
+      <legend>Personal Details</legend>
+      <label>First Name: <input type="text" id="fname" placeholder="Enter first name" required></label><br>
+      <label>Last Name: <input type="text" id="lname" placeholder="Enter last name" required></label><br>
+      <label>Father's Name: <input type="text" id="father" placeholder="Enter father's name" required></label><br>
+      <label>Mother's Name: <input type="text" id="mother" placeholder="Enter mother's name" required></label><br>
+      <label>DOB: <input type="date" id="dob" required></label><br>
+      <label>Gender:
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </label><br>
+      <label>Address: <textarea id="address" placeholder="Enter your address" required></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Details</legend>
+      <label>Email: <input type="email" id="email" placeholder="example@gmail.com" required></label><br>
+      <label>Phone: <input type="text" id="phone" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" required></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Education Details</legend>
+      <label>Education:
+        <select id="education" required>
+          <option value="">Select</option>
+          <option value="Diploma">Diploma</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Uploads</legend>
+      <label>Photo: <input type="file" id="photo" accept="image/*" required></label><br>
+      <label>Signature: <input type="file" id="sign" accept="image/*" required></label>
+    </fieldset>
+
+    <br>
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
   </form>
@@ -33,3 +60,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
