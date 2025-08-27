@@ -3,7 +3,8 @@ document.getElementById("ecetForm").addEventListener("submit", function (e) {
 
   const phone = document.getElementById("phone").value;
 
-  if (!/^\d{10}$/.test(phone)) {
+  // Small change: using [0-9] instead of \d
+  if (!/^[0-9]{10}$/.test(phone)) {
     alert("Phone number must be 10 digits.");
     return;
   }
@@ -11,3 +12,4 @@ document.getElementById("ecetForm").addEventListener("submit", function (e) {
   alert("Form submitted successfully!");
   this.reset(); // Optional: reset the form after submission
 });
+
