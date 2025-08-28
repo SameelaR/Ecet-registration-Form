@@ -1,4 +1,4 @@
-document.getElementById("ecetForm").addEventListener("submit", function (e) {
+document.getElementById("ecetRegistrationForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent form from submitting
 
   const phone = document.getElementById("phone").value;
