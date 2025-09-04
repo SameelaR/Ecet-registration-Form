@@ -3,9 +3,13 @@ document.getElementById("ecetRegistrationForm").addEventListener("submit", funct
 
   const phone = document.getElementById("phone").value;
 
-  // Small change: using [0-9] instead of \d
   if (!/^[0-9]{10}$/.test(phone)) {
     alert("Phone number must be 10 digits.");
+    return;
+  }
+  //password validation
+ if (!/^(?=.*\d).{6,}$/.test(password)) {
+    alert("Password must be at least 6 characters long and include at least one number.");
     return;
   }
 
